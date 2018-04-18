@@ -16,6 +16,16 @@ Author: Anish Prabhu B
 /* 00. Imports */
 /* 01. Typography */
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+h5 {
+  color: #9c9ea8;
+  font-weight: 100; }
+
+.card-title p {
+  color: #c8cadc; }
+
+small {
+  color: #9093a8; }
+
 /* 02. Global Declarations */
 .icon_active {
   color: #0ea40e; }
@@ -45,6 +55,9 @@ Author: Anish Prabhu B
   .sidenav a {
     font-size: 18px; } }
 /* 04. Panel or card  */
+#main_content .card .card-header {
+  background: #99ceff;
+  color: #5e9ad1; }
 #main_content .card .card-body .row_padding {
   padding-top: 2rem; }
 #main_content .card .card-body .progress {
@@ -52,12 +65,16 @@ Author: Anish Prabhu B
   border-radius: 0rem; }
 #main_content .card .card-body .border_box {
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: .25rem; }
+  border-radius: .25rem;
+  background: #f5f5f5; }
   #main_content .card .card-body .border_box .col_padding {
     padding-left: 36%;
     padding-top: 14%;
     padding-bottom: 6%; }
   #main_content .card .card-body .border_box .image_plus {
     width: 48px; }
+#main_content .card .card-body .border_box_service {
+  background-color: #ffff;
+  color: #57a1e7; }
 
 /*# sourceMappingURL=style.css.map */
