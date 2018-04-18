@@ -13,6 +13,7 @@ Author: Anish Prabhu B
 01. Typography
 02. Global Declarations
 03. Side Navbar
+04. Panel/card 
 -------------------------------------------------------------------*/
 
 
@@ -20,14 +21,18 @@ Author: Anish Prabhu B
 @import 'variables', 'mixins';
 
 /* 01. Typography */
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 
 
 /* 02. Global Declarations */
 
+.icon_active{
+	color: #0ea40e;
+}
 
 
-/* Side Navbar  */
+/* 03. Side Navbar  */
 .sidenav {
     height: 100vh;
    // position: fixed;
@@ -51,6 +56,40 @@ Author: Anish Prabhu B
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+
+/* 04. Panel or card  */
+
+#main_content{
+	.card{
+		.card-body{
+			.row_padding{
+				padding-top: 2rem;
+			}
+			.progress{
+				height: 1.5rem;
+				border-radius:0rem;
+			}
+			.border_box{
+				border: 1px solid rgba(0,0,0,.125);
+				border-radius: .25rem;	
+				.col_padding{
+	  				  padding-left: 36%;
+					  padding-top: 14%;
+					  padding-bottom: 6%;
+				}
+
+	 			.image_plus{
+	 				 width: 48px; 
+	 			}
+
+			}
+			
+
+		}
+	}
+
 }
 
 
