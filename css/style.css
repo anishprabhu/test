@@ -10,15 +10,25 @@ Author: Anish Prabhu B
 00. Imports
 01. Typography
 02. Global Declarations
-03. Side Navbar
-04. Panel/card 
+03.	Top Navbar
+04. Side Navbar
+05. Panel/card 
+06. Animations
 -------------------------------------------------------------------*/
 /* 00. Imports */
 /* 01. Typography */
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+#SideNavBar {
+  font-family: 'Roboto', sans-serif; }
+  #SideNavBar label {
+    font-weight: 100;
+    font-size: 18px; }
+
 h5 {
   color: #9c9ea8;
-  font-weight: 100; }
+  font-weight: 100;
+  vertical-align: middle; }
 
 .card-title p {
   color: #c8cadc; }
@@ -30,23 +40,37 @@ small {
 .icon_active {
   color: #0ea40e; }
 
-/* 03. Side Navbar  */
-.sidenav {
-  height: 100vh;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px; }
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block; }
-    .sidenav a:hover {
-      color: #f1f1f1; }
+/* 03. Top navbar */
+.navbar {
+  padding-left: 7.1rem; }
+
+/* 04. Side Navbar  */
+#SideNavBar {
+  border: 1px solid #dad5d5;
+  border-top: 0px;
+  border-bottom: 0px; }
+  #SideNavBar .sidenav {
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 17%; }
+    #SideNavBar .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      line-height: 2; }
+      #SideNavBar .sidenav a:hover {
+        color: #84baee; }
+    #SideNavBar .sidenav .active {
+      color: #84baee; }
+    #SideNavBar .sidenav .img_padding {
+      padding-left: 10px; }
 
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -54,27 +78,48 @@ small {
 
   .sidenav a {
     font-size: 18px; } }
-/* 04. Panel or card  */
-#main_content .card .card-header {
-  background: #99ceff;
-  color: #5e9ad1; }
-#main_content .card .card-body .row_padding {
-  padding-top: 2rem; }
-#main_content .card .card-body .progress {
-  height: 1.5rem;
-  border-radius: 0rem; }
-#main_content .card .card-body .border_box {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: .25rem;
-  background: #f5f5f5; }
-  #main_content .card .card-body .border_box .col_padding {
-    padding-left: 36%;
-    padding-top: 14%;
-    padding-bottom: 6%; }
-  #main_content .card .card-body .border_box .image_plus {
-    width: 48px; }
-#main_content .card .card-body .border_box_service {
-  background-color: #ffff;
-  color: #57a1e7; }
+/* 05. Panel or card  */
+#main_content {
+  padding-top: 20px; }
+  #main_content .card .card-header {
+    background: #99ceff;
+    color: #5e9ad1; }
+  #main_content .card .card-title h5 {
+    padding-left: 5px;
+    padding-right: 5px; }
+  #main_content .card .card-title p {
+    vertical-align: middle;
+    font-size: 13px; }
+  #main_content .card .card-body .row_padding {
+    padding-top: 2rem; }
+  #main_content .card .card-body .progress {
+    height: 1.5rem;
+    border-radius: 0rem; }
+  #main_content .card .card-body .border_box {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+    background: #f5f5f5;
+    padding-top: 9px; }
+    #main_content .card .card-body .border_box .col_padding {
+      padding-left: 36%;
+      padding-top: 14%;
+      padding-bottom: 6%; }
+    #main_content .card .card-body .border_box .image_plus {
+      width: 48px; }
+  #main_content .card .card-body .border_box_service {
+    background-color: #ffff;
+    color: #57a1e7; }
+
+/*  06. Animations  */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+.progress-bar {
+  animation: 3s ease-out 0s 1 slideInFromLeft; }
+
+.hover_animation:hover {
+  transform: scale(1.01); }
 
 /*# sourceMappingURL=style.css.map */

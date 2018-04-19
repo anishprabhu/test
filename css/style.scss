@@ -12,8 +12,10 @@ Author: Anish Prabhu B
 00. Imports
 01. Typography
 02. Global Declarations
-03. Side Navbar
-04. Panel/card 
+03.	Top Navbar
+04. Side Navbar
+05. Panel/card 
+06. Animations
 -------------------------------------------------------------------*/
 
 
@@ -22,45 +24,79 @@ Author: Anish Prabhu B
 
 /* 01. Typography */
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-h5{
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#SideNavBar {
+    font-family: 'Roboto', sans-serif;
+    label {
+    	font-weight: 100;
+    	font-size: 18px;
+    }
+}
+
+h5 {
 	color: #9c9ea8;
 	font-weight: 100;
+	vertical-align:middle;
 }
-.card-title{
-	p{
+.card-title {
+	p {
 		color:#c8cadc;
 	}
+
 }
-small{
+small {
 	color:#9093a8;
 }
 
 
 /* 02. Global Declarations */
 
-.icon_active{
+.icon_active {
 	color: #0ea40e;
 }
 
 
-/* 03. Side Navbar  */
-.sidenav {
-    height: 100vh;
-   // position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-    a {
-	    padding: 6px 8px 6px 16px;
-	    text-decoration: none;
-	    font-size: 25px;
-	    color: #818181;
-	    display: block;
-	    &:hover{
-		    color: #f1f1f1;
+
+/* 03. Top navbar */
+
+.navbar{
+	padding-left:7.1rem;
+}
+
+
+/* 04. Side Navbar  */
+#SideNavBar {
+	border: 1px solid #dad5d5;
+	border-top: 0px;
+	border-bottom: 0px;
+	.sidenav {
+	    height: 100vh;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: #fff;
+	    overflow-x: hidden;
+	    padding-top: 20px;
+	    padding-left:17%;
+	    a {
+		    padding: 6px 8px 6px 16px;
+		    text-decoration: none;
+		    font-size: 25px;
+		    color: #818181;
+		    display: block;
+		    line-height:2;
+			&:hover{
+				color: #84baee;
+			}
+		    
+		}
+		.active {
+			color: #84baee;
+		}
+		.img_padding {
+			padding-left: 10px;
 		}
 	}
 }
@@ -70,38 +106,53 @@ small{
 }
 
 
-/* 04. Panel or card  */
 
-#main_content{
-	.card{
-		.card-header{
+
+
+/* 05. Panel or card  */
+
+#main_content {
+	padding-top:20px;
+	.card {
+		.card-header {
 			background:#99ceff;
 			color : #5e9ad1;
 		}
-		.card-body{
-			.row_padding{
+		.card-title{
+			h5{
+				padding-left:5px;
+				padding-right:5px;
+			}
+			p{
+				vertical-align:middle;
+				font-size: 13px;
+			}
+		}
+		.card-body {
+
+			.row_padding {
 				padding-top: 2rem;
 			}
-			.progress{
+			.progress {
 				height: 1.5rem;
 				border-radius:0rem;
 			}
-			.border_box{
+			.border_box {
 				border: 1px solid rgba(0,0,0,.125);
 				border-radius: .25rem;	
 				background: #f5f5f5;
-				.col_padding{
-	  				  padding-left: 36%;
-					  padding-top: 14%;
-					  padding-bottom: 6%;
+				padding-top: 9px;
+				.col_padding {
+					padding-left: 36%;
+					padding-top: 14%;
+					padding-bottom: 6%;
 				}
-
-	 			.image_plus{
-	 				 width: 48px; 
+	 			.image_plus {
+	 				width: 48px; 
 	 			}
 
 			}
-			.border_box_service{
+			.border_box_service {
 				background-color:#ffff;
 				color: #57a1e7;
 			}
@@ -109,7 +160,27 @@ small{
 
 		}
 	}
-
 }
+
+
+/*  06. Animations  */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.progress-bar{
+	animation: 3s ease-out 0s 1 slideInFromLeft;
+}
+
+
+.hover_animation:hover { 
+	transform: scale(1.01);
+}
+
 
 
