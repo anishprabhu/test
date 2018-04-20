@@ -1,0 +1,25 @@
+// Media Query
+// --------------------------------------------------
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-landscape - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet_landscape{
+    @media(min-width: #{$tablet-landscape}) and (max-width: #{$desktop-width - 1px}){
+     @content;
+    }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

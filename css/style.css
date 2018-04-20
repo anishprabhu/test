@@ -104,11 +104,20 @@ small {
       padding-left: 36%;
       padding-top: 14%;
       padding-bottom: 6%; }
+      @media (min-width: 767px) and (max-width: 978px) {
+        #main_content .card .card-body .border_box .col_padding {
+          padding-left: 41%; } }
     #main_content .card .card-body .border_box .image_plus {
       width: 48px; }
+    @media (min-width: 320px) and (max-width: 766px) {
+      #main_content .card .card-body .border_box {
+        margin-bottom: 20px; } }
   #main_content .card .card-body .border_box_service {
     background-color: #ffff;
     color: #57a1e7; }
+  @media (min-width: 320px) and (max-width: 766px) {
+    #main_content .card {
+      margin-bottom: 20px; } }
 
 /*  06. Animations  */
 @keyframes slideInFromLeft {

@@ -61,7 +61,7 @@ small {
 
 /* 03. Top navbar */
 
-.navbar{
+.navbar {
 	padding-left:7.1rem;
 }
 
@@ -146,10 +146,16 @@ small {
 					padding-left: 36%;
 					padding-top: 14%;
 					padding-bottom: 6%;
+					@include tablet{
+					    padding-left: 41%;
+					}
 				}
 	 			.image_plus {
 	 				width: 48px; 
 	 			}
+	 			@include mobile{
+					margin-bottom: 20px;
+				}
 
 			}
 			.border_box_service {
@@ -158,6 +164,9 @@ small {
 			}
 			
 
+		}
+		@include mobile{
+			margin-bottom: 20px;
 		}
 	}
 }
