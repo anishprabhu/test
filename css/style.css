@@ -16,6 +16,10 @@ Author: Anish Prabhu B
 06. Animations
 -------------------------------------------------------------------*/
 /* 00. Imports */
+/* $mobile-width: 320px;
+$tablet-width: 767px;
+$tablet-landscape:979px;
+$desktop-width: 1200px; */
 /* 01. Typography */
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 @import url("https://fonts.googleapis.com/css?family=Roboto");
@@ -45,10 +49,22 @@ small {
   padding-left: 7.1rem; }
 
 /* 04. Side Navbar  */
+.navbar-show {
+  display: none; }
+  .navbar-show button {
+    background: transparent;
+    border: none; }
+  @media (min-width: 375px) and (max-width: 424px) {
+    .navbar-show {
+      display: block; } }
+
 #SideNavBar {
   border: 1px solid #dad5d5;
   border-top: 0px;
   border-bottom: 0px; }
+  @media (min-width: 375px) and (max-width: 424px) {
+    #SideNavBar {
+      display: none; } }
   #SideNavBar .sidenav {
     height: 100vh;
     z-index: 1;
@@ -100,22 +116,37 @@ small {
     border-radius: .25rem;
     background: #f5f5f5;
     padding-top: 9px; }
+    @media (min-width: 425px) and (max-width: 766px) {
+      #main_content .card .card-body .border_box {
+        margin-bottom: 20px; } }
+    @media (min-width: 320px) and (max-width: 374px) {
+      #main_content .card .card-body .border_box {
+        margin-bottom: 20px; } }
+    @media (min-width: 375px) and (max-width: 424px) {
+      #main_content .card .card-body .border_box {
+        margin-bottom: 20px; } }
     #main_content .card .card-body .border_box .col_padding {
       padding-left: 36%;
       padding-top: 14%;
       padding-bottom: 6%; }
-      @media (min-width: 767px) and (max-width: 978px) {
+      @media (min-width: 375px) and (max-width: 424px) {
         #main_content .card .card-body .border_box .col_padding {
-          padding-left: 41%; } }
+          padding-left: 40%; } }
+      @media (min-width: 425px) and (max-width: 766px) {
+        #main_content .card .card-body .border_box .col_padding {
+          padding-left: 42%; } }
     #main_content .card .card-body .border_box .image_plus {
       width: 48px; }
-    @media (min-width: 320px) and (max-width: 766px) {
-      #main_content .card .card-body .border_box {
-        margin-bottom: 20px; } }
   #main_content .card .card-body .border_box_service {
     background-color: #ffff;
     color: #57a1e7; }
-  @media (min-width: 320px) and (max-width: 766px) {
+  @media (min-width: 425px) and (max-width: 766px) {
+    #main_content .card {
+      margin-bottom: 20px; } }
+  @media (min-width: 320px) and (max-width: 374px) {
+    #main_content .card {
+      margin-bottom: 20px; } }
+  @media (min-width: 375px) and (max-width: 424px) {
     #main_content .card {
       margin-bottom: 20px; } }
 

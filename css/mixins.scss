@@ -1,11 +1,23 @@
 // Media Query
 // --------------------------------------------------
-@mixin mobile {
-  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+
+@mixin mobile_small {
+  @media (min-width: #{$mobile-small}) and (max-width: #{$mobile-medium - 1px}) {
     @content;
   }
 }
 
+@mixin mobile_medium {
+  @media (min-width: #{$mobile-medium}) and (max-width: #{$mobile-large - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (min-width: #{$mobile-large}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-landscape - 1px}) {
     @content;
